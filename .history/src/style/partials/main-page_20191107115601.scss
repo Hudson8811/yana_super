@@ -1,0 +1,66 @@
+.s-main-top {
+    position: relative;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__tree {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 83vw;
+        z-index: 0;
+    }
+
+    &__yana {
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 10vw;
+    }
+}
+
+.s-m-top-text {
+    position: absolute;
+    z-index: 2;
+    &__title {
+        /* or 60px */
+        display: flex;
+        align-items: center;
+        color: #000000;
+        font-family: Roboto;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 100%;
+        font-style: normal;
+    }
+
+    &__desc {
+        display: flex;
+        align-items: center;
+        color: #000000;
+        font-family: Roboto;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 100%;
+        font-style: normal;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 182.51px;
+        height: 54px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #000000;
+        font-family: Roboto;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 150%;
+        font-style: normal;
+    }
+}

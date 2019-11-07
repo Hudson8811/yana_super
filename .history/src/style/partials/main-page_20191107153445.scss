@@ -1,0 +1,234 @@
+.s-main-top,
+.s-main-bottom {
+
+    img,
+    picture source {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.s-main-top {
+    position: relative;
+    background: #D4DBE0;
+    height: 52.7vw;
+    overflow: hidden;
+
+
+    &__tree {
+        position: absolute !important;
+        right: -17vw !important;
+        top: -21.5vw !important;
+        left: auto !important;
+        bottom: auto !important;
+        width: 101vw;
+        z-index: 0;
+    }
+
+    &__yana {
+        z-index: 1;
+        position: absolute !important;
+        right: 17vw !important;
+        bottom: -30vw !important;
+        left: auto !important;
+        top: auto !important;
+        width: 36vw;
+    }
+}
+
+.s-m-top-text {
+    position: absolute !important;
+    z-index: 2;
+
+    left: 11.45vw !important;
+    top: 18.8vw !important;
+
+    right: auto !important;
+    bottom: auto !important;
+
+    &__title {
+        color: #000000;
+        font-weight: 900;
+        font-size: vw(60);
+        line-height: 100%;
+        font-style: normal;
+        width: 28vw;
+    }
+
+    &__desc {
+        font-style: normal;
+        font-weight: 300;
+        font-size: vw(20);
+        line-height: 150%;
+        width: 22vw;
+        margin-top: 1vw;
+    }
+
+    &__btn {
+        margin-top: 2.155vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: vw(182.51);
+        height: vw(54);
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #000000;
+        font-family: Roboto;
+        font-weight: 900;
+        font-size: vw(16);
+        line-height: 150%;
+        font-style: normal;
+        cursor: pointer;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+
+.s-trailer {
+    padding-top: 4vw;
+    padding-bottom: 8vw;
+
+    &__title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: vw(32);
+        line-height: 130%;
+        text-align: center;
+
+        color: #000000;
+        margin-bottom: 2vw;
+
+    }
+
+    &__video-container {
+        background-color: #E8ECEF !important;
+
+        width: 71.3vw;
+        margin: 0 auto;
+
+        video {
+
+            source {}
+        }
+
+        .play-vid {
+            position: absolute;
+            left: 50.6%;
+            top: 51%;
+            transform: translate(-50%, -50%);
+            width: vw(88.72);
+            height: vw(88.72);
+            background: #ffffff;
+            border-radius: 50%;
+
+            svg {
+                width: 28%;
+                height: 33%;
+                position: absolute;
+                left: 54%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            transition: opacity .2s;
+
+            &:hover {
+                opacity: .9;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width:1025px) {
+    .s-trailer video {
+        display: none;
+    }
+}
+
+.s-main-bottom {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    /*background: url('../img/bottom-bg-hires.png') no-repeat -5vw center;
+    background-size: 100vw auto;*/
+
+    height: 56.4vw;
+}
+
+
+
+.s-main-bottom-bg {
+    position: absolute;
+    z-index: -1;
+    left: -6vw;
+    top: -12.5vw;
+    width: 114vw;
+
+
+    img {
+        width: 100%;
+    }
+}
+
+.s-m-bottom-text {
+    padding-top: 14.2vw;
+    margin: 0 auto;
+    width: 35vw;
+
+    text-align: center;
+
+    &__title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: vw(32);
+        line-height: vw(37);
+        /* identical to box height */
+
+        text-align: center;
+
+        color: #000000;
+        margin-bottom: 3.2vw;
+    }
+
+    p {
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: vw(24);
+        line-height: 150%;
+        margin-bottom: 1.9vw;
+
+        color: #000000;
+
+        br {}
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .s-main-top {
+        height: 160.2vw;
+    }
+
+    &__video-container {
+        background-color: #222526 !important;
+        width: 71.3vw;
+        margin: 0 auto;
+
+        video {
+            display: block;
+
+            source {}
+        }
+
+    }
+}
