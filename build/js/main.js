@@ -223,7 +223,6 @@ $.getJSON('test.json', function(data) {
 
                     $('.final').append(outHtml);
                 });
-
                 //тут будет функция запроса данных для share
             } else {
                 currentQuestion++;
