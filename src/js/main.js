@@ -8,3 +8,4 @@
 /* my scripts */
 
 //= partials/main.js
+//= partials/test.js
