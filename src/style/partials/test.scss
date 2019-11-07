@@ -1,8 +1,12 @@
 #fullpage{
   height: auto !important;
-  background: #E5E5E5 url("../img/test-bg.jpg") center bottom no-repeat;
+  background: #E5E5E5 url("../img/test-bg.jpg") center top no-repeat;
+  background-size: auto 100%;
 
 
+  button{
+    font-family: $font1;
+  }
 
   .section{
     .inner{
@@ -38,10 +42,15 @@
           justify-content: center;
           text-align: center;
           padding: 0 vw(40);
-          font-weight: 700;
+          font-weight: 900;
           font-size: vw(16);
           text-transform: uppercase;
           color: #FFFFFF;
+          transition: 0.2s ease;
+          &:hover,
+          &:active{
+            background: #000000;
+          }
         }
         .question{
           .text{
@@ -54,6 +63,7 @@
         }
         .answers{
           display: none;
+          width: 100%;
           .title{
             font-weight: bold;
             font-size: vw(24);
@@ -64,10 +74,15 @@
           }
           .list{
             padding: 0 vw(40);
+            width: 100%;
+            box-sizing: border-box;
             label{
               display: flex;
               align-items: center;
               cursor: pointer;
+              +label{
+                margin-top: vw(32);
+              }
               input{
                 width: vw(24);
                 height: vw(24);
@@ -105,7 +120,7 @@
       }
 
       .final{
-        width: vw(540);
+        width: vw(600);
         min-height: vw(499);
         padding-top: vw(21);
         box-sizing: border-box;
@@ -115,7 +130,7 @@
         flex-direction: column;
         background: #ffffff;
         .img-block{
-          width: vw(552);
+          width: vw(557);
           margin: 0 auto vw(36);
           img{
             width: 100%;
@@ -136,7 +151,6 @@
           line-height: 100%;
           text-align: center;
           width: vw(460);
-          min-height: vw(240);
           margin: vw(15) auto 0;
         }
         .place{
@@ -172,15 +186,86 @@
         }
         .text{
           width: vw(460);
+          //min-height: vw(240);
           margin: vw(27) auto 0;
           font-weight: 300;
           font-size: vw(20);
           line-height: 150%;
           text-align: center;
         }
-        .share-btn{
+        .share-row{
           margin-top: vw(24);
           border-top: 1px solid rgba(0, 0, 0, 0.1);
+          height: vw(60);
+          width: 100%;
+          position: relative;
+          .share-btn{
+            border: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            background: transparent;
+            pointer-events: none;
+            svg{
+              width: vw(20);
+              height: vw(20);
+            }
+            span{
+              font-weight: 900;
+              font-size: 16px;
+              text-transform: uppercase;
+              color: #000000;
+              margin-left: vw(14);
+            }
+          }
+          .social-block{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #ffffff;
+            opacity: 0;
+            transition: 0.3s ease;
+            .social-link{
+              display: block;
+              cursor: pointer;
+              width: vw(24);
+              height: vw(22);
+              margin: 0;
+              padding: 0;
+              border: none;
+              background: transparent;
+              +.social-link{
+                margin-left: vw(50);
+              }
+              svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+                pointer-events: none;
+              }
+              &:hover,
+              &:active {
+                svg path {
+                  fill: #E9B382;
+                }
+              }
+            }
+          }
+          &:hover{
+            .social-block{
+              opacity: 1;
+            }
+          }
         }
       }
     }

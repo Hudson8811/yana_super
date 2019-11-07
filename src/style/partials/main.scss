@@ -5,6 +5,9 @@ $resolution2: 320;
 a{
 	text-decoration: none;
 }
+*:focus{
+  outline: none;
+}
 
 body{
 	font-family: $font1;
