@@ -10,6 +10,7 @@
 }
 
 .s-main-top {
+    margin-top:  3.64vw;
     position: relative;
     background: #D4DBE0;
     height: 52.7vw;
@@ -219,17 +220,20 @@
 
 @media screen and (min-width:1025px) {
     .only-mobile {
-        display: none;
+        display: none !important;
     }
 }
 
 @media screen and (max-width:1024px) {
-    .only-desctop {
-        display: none;
+    .only-desktop {
+        display: none !important;
     }
 }
 
 @media screen and (max-width:1024px) {
+    .s-main-top {
+        height: 14.375vw;
+    }
     .s-main-top {
         height: 160.2vw;
     }
@@ -371,4 +375,45 @@
         }
     }
 
+}
+
+
+#home-apples {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    left: 1.1vw;
+    top: 46.5%;
+
+    li {
+        display: block;
+        list-style: none;
+        margin-bottom: 15px;
+
+        a svg * {
+            transition-duration: .2s;
+        }
+
+        &.active a svg * {
+            fill: #000000;
+        }
+
+        &:not(.active) a svg * {
+            opacity: .4;
+        }
+
+        &:hover {
+            a svg * {
+                opacity:1;
+                fill: #000000;
+            }
+
+        }
+    }
+
+    .home-apples__apple {}
+
+    .fill-active {
+        fill: transparent;
+    }
 }

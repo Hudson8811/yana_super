@@ -15,11 +15,12 @@ function detectmob() {
 }
 
 $(document).ready(function () {
-    ///////////////////////////section-1
-    if ($('.s-trailer__title:visible').length > 0) {
-        var scene_m = document.getElementById('main-parallax-scene');
-        var parallaxInstance = new Parallax(scene_m);
-    }
+    $('.mobile-menu').click(function () {
+        $(this).toggleClass('active');
+        $('.mobile-menu-container').toggleClass('active');
+    });
+
+
 
     ///////////////////////////section-2
 
@@ -38,9 +39,54 @@ $(document).ready(function () {
             }
         });
     }
+
+
+
+    /////////////////homepage-apples
+
+    if ($('#home-apples').length > 0) {
+        var spy = new Gumshoe('#home-apples a');
+    }
+
+
+    ///////////////////////////section-1
+    if ($('.s-trailer__title:visible').length > 0) {
+        var scene_m = $('.main-parallax-scene');
+        var parallaxInstance = new Parallax(scene_m[0]);
+    }
 });
 
-$('.mobile-menu').click(function () {
-    $(this).toggleClass('active');
-    $('.mobile-menu-container').toggleClass('active');
+function getPosition(element) {
+    var xPosition = 0;
+    var yPosition = 0;
+
+    while(element) {
+        xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+        element = element.offsetParent;
+    }
+
+    return { x: xPosition, y: yPosition };
+}
+
+$(document).ready(function () {
+
+    if ($('.s-main-top').length > 0) {
+        $("a:not([href='javascript:;']):not([href=''])").click(function () {
+            $("html, body").animate({
+
+         scrollTop: ($($(this).attr("href")).offset().top - $('header').height()) + "px"
+            }, {
+                duration: 500,
+                easing: "swing"
+            });
+
+            if ($('.mobile-menu.active').length > 0) {
+                $('.mobile-menu').click();
+            }
+            return false;
+        });
+    }
+
+
 });
