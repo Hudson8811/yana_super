@@ -1,0 +1,18 @@
+$font1: "Roboto", sans-serif;
+$resolution: 1920;
+$resolution2: 320;
+
+a{
+	text-decoration: none;
+}
+
+body{
+	font-family: $font1;
+	margin: 0;
+}
+
+.container{
+	margin: 0 auto;
+	position: relative;
+}
+
