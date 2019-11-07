@@ -14,10 +14,41 @@
         width: vw(540);
         min-height: vw(499);
         box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: vw(10);
         .number{
           text-align: center;
           font-weight: 300;
           font-size: vw(18);
+          margin-bottom: vw(15);
+        }
+        button{
+          margin-top: vw(45);
+          border: none;
+          background: #E9B382;
+          cursor: pointer;
+          height: vw(54);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 0 vw(40);
+          font-weight: 900;
+          font-size: vw(16);
+          text-transform: uppercase;
+          color: #FFFFFF;
+        }
+        .question{
+          .text{
+            max-width: vw(400);
+            text-align: center;
+            font-weight: 300;
+            font-size: vw(24);
+            line-height: 150%;
+          }
         }
       }
     }
