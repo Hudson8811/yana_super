@@ -18,6 +18,7 @@ $(document).ready(function() {
 
     $('.mobile-menu').click(function () {
         $(this).toggleClass('active');
+        $('.mobile-menu-container').toggleClass('active');
     });
 
 });
