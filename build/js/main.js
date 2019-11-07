@@ -55,3 +55,9 @@ $('.mobile-menu').click(function () {
     $(this).toggleClass('active');
     $('.mobile-menu-container').toggleClass('active');
 });
+$(document).ready(function() {
+    new fullpage('#fullpage', {
+        navigation: true,
+        navigationPosition: 'left',
+    });
+});
