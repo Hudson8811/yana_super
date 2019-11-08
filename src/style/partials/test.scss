@@ -15,6 +15,10 @@
       width: vw(1440);
       margin: 0 auto;
       height: 100%;
+      @include media((
+              width: (md: 100%),
+              justify-content: (md: center),
+      ));
       .quest{
         width: vw(540);
         min-height: vw(499);
@@ -25,11 +29,20 @@
         flex-direction: column;
         padding: vw(38) vw(10);
         background: #ffffff;
+        @include media((
+                width: (md: 100%),
+                min-height: (md: vw2(340)),
+                padding: (md: vw2(35) 0),
+        ));
         .number{
           text-align: center;
           font-weight: 300;
           font-size: vw(18);
           margin-bottom: vw(15);
+          @include media((
+                  font-size: (md: vw2(14)),
+                  margin-bottom: (md: vw2(12)),
+          ));
         }
         button{
           margin: vw(45) auto vw(15);
@@ -47,6 +60,12 @@
           text-transform: uppercase;
           color: #FFFFFF;
           transition: 0.2s ease;
+          @include media((
+                  height: (md: vw2(40)),
+                  padding: (md: 0 vw2(21)),
+                  font-size: (md: vw2(12)),
+                  margin: (md: vw2(35) auto 0),
+          ));
           &:hover,
           &:active{
             background: #000000;
@@ -54,11 +73,15 @@
         }
         .question{
           .text{
-            max-width: vw(400);
+            max-width: vw(420);
             text-align: center;
             font-weight: 300;
             font-size: vw(24);
             line-height: 150%;
+            @include media((
+                    max-width: (md: vw2(248)),
+                    font-size: (md: vw2(16)),
+            ));
           }
         }
         .answers{
@@ -71,17 +94,27 @@
             text-align: center;
             color: #000000;
             margin-bottom: vw(38);
+            @include media((
+                    margin-bottom: (md: vw2(15)),
+                    font-size: (md: vw2(20)),
+            ));
           }
           .list{
             padding: 0 vw(40);
             width: 100%;
             box-sizing: border-box;
+            @include media((
+                    padding: (md: 0 vw2(20) 0 vw2(30)),
+            ));
             label{
               display: flex;
               align-items: center;
               cursor: pointer;
               +label{
                 margin-top: vw(32);
+                @include media((
+                        margin-top: (md: vw2(15)),
+                ));
               }
               input{
                 width: vw(24);
@@ -98,6 +131,11 @@
                 -moz-appearance: none;
                 border-radius: 100%;
                 flex-shrink: 0;
+                @include media((
+                        width: (md: vw2(18)),
+                        height: (md: vw2(18)),
+                        margin-right: (md: vw2(11)),
+                ));
                 &:hover{
                   opacity: 0.8;
                 }
@@ -106,6 +144,9 @@
                   background-size: vw(14) vw(9);
                   border-color: #E9B382;
                   opacity: 1;
+                  @include media((
+                          background-size: (md: vw2(11) vw2(7)),
+                  ));
                 }
               }
               span{
@@ -113,6 +154,10 @@
                 font-size: vw(18);
                 line-height: vw(21);
                 color: #000000;
+                @include media((
+                        font-size: (md: vw2(14)),
+                        line-height: (md: vw2(21)),
+                ));
               }
             }
           }
@@ -126,12 +171,21 @@
         box-sizing: border-box;
         display: flex;
         align-items: center;
-        justify-content: center;
         flex-direction: column;
         background: #ffffff;
+        @include media((
+                width: (md: vw2(246)),
+                min-height: (md: vw2(0)),
+                padding-top: (md: vw2(13)),
+                padding-bottom: (md: vw2(20)),
+        ));
         .img-block{
           width: vw(557);
           margin: 0 auto vw(36);
+          @include media((
+                  width: (md: vw2(219)),
+                  margin-bottom: (md: vw2(13)),
+          ));
           img{
             width: 100%;
             display: block;
@@ -143,6 +197,9 @@
           font-size: vw(18);
           text-transform: uppercase;
           margin: 0 auto;
+          @include media((
+                  display: (md: none),
+          ));
         }
         .title{
           font-weight: bold;
@@ -151,6 +208,12 @@
           text-align: center;
           width: vw(460);
           margin: vw(15) auto 0;
+          @include media((
+                  margin: (md: 0 vw2(13)),
+                  line-height: (md: 150%),
+                  width: (md: auto),
+                  font-size: (md: vw2(20)),
+          ));
         }
         .place{
           font-weight: bold;
@@ -162,6 +225,9 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          @include media((
+                  display: (md: none),
+          ));
           &::before,
           &::after{
             content: "";
@@ -191,6 +257,9 @@
           font-size: vw(20);
           line-height: 150%;
           text-align: center;
+          @include media((
+                  display: (md: none),
+          ));
         }
         .share-row{
           margin-top: vw(24);
@@ -198,6 +267,9 @@
           height: vw(60);
           width: 100%;
           position: relative;
+          @include media((
+                  display: (md: none),
+          ));
           .share-btn{
             border: none;
             margin: 0;
@@ -215,7 +287,7 @@
             }
             span{
               font-weight: 900;
-              font-size: 16px;
+              font-size: vw(16);
               text-transform: uppercase;
               color: #000000;
               margin-left: vw(14);

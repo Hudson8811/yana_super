@@ -97,17 +97,23 @@ html.fp-enabled,
 }
 #fp-nav {
     position: fixed;
-    z-index: 100;
+    z-index: 50;
     margin-top: -32px;
     top: 50%;
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
 }
 #fp-nav.fp-right {
-    right: 17px;
+    right: vw(22);
+    @include media((
+            right: (md: vw2(9)),
+    ));
 }
 #fp-nav.fp-left {
-    left: 17px;
+    left: vw(22);
+    @include media((
+            left: (md: vw2(9)),
+    ));
 }
 .fp-slidesNav{
     position: absolute;
@@ -138,8 +144,15 @@ html.fp-enabled,
     width:  vw(20);
     margin: 0;
     position:relative;
+    @include media((
+            height: (md: vw2(12)),
+            width: (md: vw2(12)),
+    ));
     +li{
         margin-top: vw(20);
+        @include media((
+                margin-top: (md: vw2(12)),
+        ));
     }
 }
 .fp-slidesNav ul li {
@@ -175,6 +188,11 @@ background-image: url("../img/apple1.svg");
     top: 50%;
     margin: vw(-10) 0 0 vw(-10);
     opacity: 0.3;
+    @include media((
+            height: (md: vw2(12)),
+            width: (md: vw2(12)),
+            margin: (md: vw2(-6) 0 0 vw2(-6)),
+    ));
 }
 
 #fp-nav ul li .fp-tooltip {
@@ -200,9 +218,15 @@ background-image: url("../img/apple1.svg");
 }
 #fp-nav ul li .fp-tooltip.fp-right {
     right: vw(22);
+    @include media((
+            right: (md: vw2(9)),
+    ));
 }
 #fp-nav ul li .fp-tooltip.fp-left {
-    left: 20px;
+    left: vw(22);
+    @include media((
+            left: (md: vw2(9)),
+    ));
 }
 .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,
