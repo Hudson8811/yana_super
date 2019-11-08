@@ -179,6 +179,7 @@ if ($('body').hasClass('test-page')){
             $('footer').hide();
         } else {
             $('footer').appendTo('#fullpage');
+            $('#fullpage').addClass('with-footer');
         }
 
 
@@ -186,6 +187,21 @@ if ($('body').hasClass('test-page')){
             navigation: true,
             navigationPosition: 'left',
             keyboardScrolling: false,
+
+
+
+            onLeave: function (origin, destination, direction) {
+                if (destination.isLast && direction == 'down' && $('#fullpage').hasClass('with-footer')){
+                    fullpage_api.setMouseWheelScrolling(true, 'up');
+                    fullpage_api.setAllowScrolling(true, 'up');
+                }
+                if (origin.isLast && direction == 'up' && $('#fullpage').hasClass('with-footer')){
+                    fullpage_api.setMouseWheelScrolling(false);
+                    fullpage_api.setAllowScrolling(false);
+                    fullpage_api.setMouseWheelScrolling(true, 'down');
+                    fullpage_api.setAllowScrolling(true, 'down');
+                }
+            }
         });
 
         fullpage_api.setMouseWheelScrolling(false);
@@ -228,8 +244,10 @@ if ($('body').hasClass('test-page')){
                         });
 
                         $('.final').append(outHtml);
-                        fullpage_api.setMouseWheelScrolling(true, 'down');
-                        fullpage_api.setAllowScrolling(true, 'down');
+                        if ($('#fullpage').hasClass('with-footer')){
+                            fullpage_api.setMouseWheelScrolling(true, 'down');
+                            fullpage_api.setAllowScrolling(true, 'down');
+                        }
                     });
                     //тут будет функция запроса данных для share
                 } else {
@@ -237,7 +255,15 @@ if ($('body').hasClass('test-page')){
                 }
             }
         });
+
+
     });
 
 
 }
+
+
+$(window).on('load',function () {
+    $('#preloader').fadeOut('slow');
+
+});

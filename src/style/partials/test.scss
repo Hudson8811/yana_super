@@ -3,6 +3,13 @@
   background: #E5E5E5 url("../img/test-bg.jpg") center top no-repeat;
   background-size: auto 100%;
 
+  &.with-footer{
+    background-position: center bottom  vw(113);
+    @include media((
+            background-position: (md: center bottom  vw(209)),
+            background-size: (md: auto 103.5%),
+    ));
+  }
 
   button{
     font-family: $font1;
@@ -349,14 +356,14 @@
 
 
   footer{
-    display: none;
+    height: vw(113) !important;
+    display: block;
     @include media((
-            display: (md: block),
             height: (md: vw2(209) !important),
     ));
     .fp-tableCell{
       display: block;
-      height: auto !important;
+      height: 100% !important;
     }
   }
 
