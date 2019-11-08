@@ -69,7 +69,12 @@ $.getJSON('test.json', function(data) {
     });
 
     $('#fullpage').append('<div class="section"><div class="inner"><div class="final"></div></div></div>');
-    $('footer').appendTo('#fullpage');
+    if ($(window).width()>1024){
+        $('footer').hide();
+    } else {
+        $('footer').appendTo('#fullpage');
+
+    }
 
 
     new fullpage('#fullpage', {
