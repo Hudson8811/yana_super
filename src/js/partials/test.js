@@ -158,7 +158,3 @@ if ($('body').hasClass('test-page')){
 }
 
 
-$(window).on('load',function () {
-    $('#preloader').fadeOut('slow');
-
-});
