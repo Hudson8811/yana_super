@@ -174,6 +174,7 @@ $.getJSON('test.json', function(data) {
     });
 
     $('#fullpage').append('<div class="section"><div class="inner"><div class="final"></div></div></div>');
+    $('footer').appendTo('#fullpage');
 
 
     new fullpage('#fullpage', {
@@ -222,6 +223,8 @@ $.getJSON('test.json', function(data) {
                     });
 
                     $('.final').append(outHtml);
+                    fullpage_api.setMouseWheelScrolling(true, 'down');
+                    fullpage_api.setAllowScrolling(true, 'down');
                 });
                 //тут будет функция запроса данных для share
             } else {

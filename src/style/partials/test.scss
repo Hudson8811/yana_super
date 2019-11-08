@@ -348,6 +348,18 @@
   }
 
 
+  footer{
+    display: none;
+    @include media((
+            display: (md: block),
+            height: (md: vw2(209) !important),
+    ));
+    .fp-tableCell{
+      display: block;
+      height: auto !important;
+    }
+  }
+
 }
 
 #fp-nav ul li a{
