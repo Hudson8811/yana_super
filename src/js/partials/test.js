@@ -83,6 +83,13 @@ if ($('body').hasClass('test-page')){
             navigationPosition: 'left',
             keyboardScrolling: false,
 
+            scrollOverflow: true,
+            scrollOverflowOptions: {
+                scrollbars: false,
+                click: false,
+                preventDefaultException: { tagName:/label/ }
+            },
+
             onLeave: function (origin, destination, direction) {
                 if (destination.isLast && direction == 'down' && $('#fullpage').hasClass('with-footer')){
                     fullpage_api.setMouseWheelScrolling(true, 'up');
@@ -99,7 +106,6 @@ if ($('body').hasClass('test-page')){
 
         fullpage_api.setMouseWheelScrolling(false);
         fullpage_api.setAllowScrolling(false);
-
 
         $('.section .question button').click(function () {
             event.preventDefault();
