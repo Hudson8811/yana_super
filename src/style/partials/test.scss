@@ -21,10 +21,13 @@
       align-items: center;
       width: vw(1440);
       margin: 0 auto;
-      height: 100%;
+      min-height: 100%;
+      box-sizing: border-box;
+      padding-top: vw(70);
       @include media((
               width: (md: 100%),
               justify-content: (md: center),
+              padding-top: (md: vw2(46)),
       ));
       .quest{
         width: vw(540);
@@ -92,8 +95,15 @@
           }
         }
         .answers{
-          display: none;
+          display: block;
           width: 100%;
+          margin-top: vw(30);
+
+          @include media((
+                  margin-top: (md: vw2(20))
+          ));
+
+
           .title{
             font-weight: bold;
             font-size: vw(24);
