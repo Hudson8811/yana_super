@@ -192,10 +192,6 @@ if ($('body').hasClass('test-page')){
             navigation: true,
             navigationPosition: 'left',
             keyboardScrolling: false,
-            scrollOverflow: true,
-            scrollOverflowOptions: {
-                scrollbars: false,
-            },
 
             onLeave: function (origin, destination, direction) {
                 if (destination.isLast && direction == 'down' && $('#fullpage').hasClass('with-footer')){
