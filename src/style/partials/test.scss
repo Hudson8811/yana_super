@@ -85,9 +85,9 @@
           .text{
             max-width: vw(420);
             text-align: center;
-            font-weight: 300;
+            font-weight: 700;
             font-size: vw(24);
-            line-height: 150%;
+            line-height: 1.1;
             @include media((
                     max-width: (md: vw2(248)),
                     font-size: (md: vw2(16)),
@@ -97,10 +97,10 @@
         .answers{
           display: block;
           width: 100%;
-          margin-top: vw(30);
+          margin-top: vw(15);
 
           @include media((
-                  margin-top: (md: vw2(20))
+                  margin-top: (md: vw2(13))
           ));
 
 
@@ -117,22 +117,17 @@
             ));
           }
           .list{
-            padding: 0 vw(40);
+            padding: 0;
             width: 100%;
             box-sizing: border-box;
-            @include media((
-                    padding: (md: 0 vw2(20) 0 vw2(30)),
-            ));
             label{
               display: flex;
               align-items: center;
               cursor: pointer;
-              +label{
-                margin-top: vw(32);
-                @include media((
-                        margin-top: (md: vw2(15)),
-                ));
-              }
+              padding: vw(16) vw(40) vw(16);
+              @include media((
+                      padding: (md: vw2(7) vw2(20) vw2(7) vw2(30)),
+              ));
               input{
                 width: vw(24);
                 height: vw(24);
@@ -153,9 +148,6 @@
                         height: (md: vw2(18)),
                         margin-right: (md: vw2(11)),
                 ));
-                &:hover{
-                  opacity: 0.8;
-                }
                 &:checked{
                   background: #E9B382 url("../img/check.svg") center center no-repeat;
                   background-size: vw(14) vw(9);
@@ -175,6 +167,14 @@
                         font-size: (md: vw2(14)),
                         line-height: (md: vw2(21)),
                 ));
+              }
+
+              &:hover{
+                background: rgba(233, 179, 130, 0.1);
+                input{
+                  opacity: 1;
+                  border-color: #E9B382;
+                }
               }
             }
           }

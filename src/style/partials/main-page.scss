@@ -1,6 +1,7 @@
 .s-main-top,
 .s-main-bottom {
 
+    z-index: 1;
     img,
     picture source {
         width: 100%;
@@ -160,7 +161,7 @@
     /*background: url('../img/bottom-bg-hires.png') no-repeat -5vw center;
     background-size: 100vw auto;*/
 
-    height: 56.4vw;
+    height: 55.625vw;
 }
 
 
@@ -168,14 +169,16 @@
 .s-main-bottom-bg {
     position: absolute;
     z-index: -1;
-    left: -6vw;
-    top: -12.5vw;
-    width: 114vw;
+    left: 0;
+    top: 0;
+    width: 100%;
 
     pointer-events: none;
 
     img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -197,7 +200,7 @@
         text-align: center;
 
         color: #000000;
-        margin-bottom: 1.5vw;
+        margin-bottom: 4.5vw;
     }
 
     p {
@@ -207,8 +210,7 @@
         font-weight: 300;
         font-size: vw(24);
         line-height: 150%;
-        margin-bottom: 0.9vw;
-
+        margin-bottom: 1.5em;
         color: #000000;
 
         br {}
@@ -353,15 +355,14 @@
     }
 
     .s-main-bottom {
-        height: 216.7vw;
+        height: 186.875vw;
         background: #E8ECEF;
 
         &-bg {
-            z-index: 1;
-            left: -49vw;
-            bottom: -5.5vw;
+            z-index: -1;
+            left: 0;
+            bottom: -10.625vw;
             top: auto;
-            width: 199vw;
         }
     }
 
@@ -380,7 +381,7 @@
         &__title {
             font-size: vw2(24);
             line-height: vw2(28);
-            margin-bottom: 4.4vw;
+            margin-bottom: 23.4vw;
         }
 
         p {
