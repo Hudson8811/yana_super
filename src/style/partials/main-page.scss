@@ -241,12 +241,11 @@
 }
 
 @media screen and (max-width:1024px) {
-    .s-main-top {
-        height: 14.375vw;
-    }
 
     .s-main-top {
         height: 160.2vw;
+        background: url("../img/mobile-home-bg.jpg") center top no-repeat;
+        background-size: cover;
     }
 
     &__video-container {
@@ -270,12 +269,15 @@
         right: -92vw !important;
         top: -25.5vw !important;
         width: 206vw;
+        display: none;
+
     }
 
     .s-main-top__yana {
         right: 1vw !important;
         bottom: -5vw !important;
         width: 66vw;
+        display: none;
     }
 
     .yana-mobile-grad-s-m {
@@ -335,7 +337,7 @@
     }
 
     .s-trailer {
-        padding-top: .5vh;
+        padding-top: 0;
         padding-bottom: 0;
         background: #d4dbe0;
 
